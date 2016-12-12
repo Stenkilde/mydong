@@ -31,5 +31,15 @@ let dongers = [
 		id: 2,
 		name: 'shrug',
 		code: '¯\\_(ツ)_/¯'
+	},
+	{
+		id: 3,
+		name: 'fightme',
+		code: '(ง’̀-‘́)ง'
+	},
+	{
+		id: 4,
+		name: 'tablereverse',
+		code: '┬━┬﻿ ノ( ゜¸゜ノ)'
 	}
 ];
