@@ -49,20 +49,20 @@ if (argumentDong.length > 0) {
 } else {
 	prompt.start();
 
-		prompt.message = 'Hello sir';
+	prompt.message = 'Hello sir';
 
-		prompt.get({
-		    properties: {
-		      	dong: {
-		        	description: 'Which dong do you want today?'
-		  		}
-		    }
-		  }, function (err, result) {
-		    	let filteredDong = dongers.filter(dong => dong.name === result.dong);
-		    	let escapedDong = filteredDong.shift().code;
-		    	ncp.copy(escapedDong, function() {
-		    		console.log(chalk.bold.cyan('We saved him to your clipboard!'));
-		    	})
-				console.log(escapedDong);
-		});
+	prompt.get({
+	    properties: {
+	      	dong: {
+	        	description: 'Which dong do you want today?'
+	  		}
+	    }
+	  }, function (err, result) {
+	    	let filteredDong = dongers.filter(dong => dong.name === result.dong);
+	    	let escapedDong = filteredDong.shift().code;
+	    	ncp.copy(escapedDong, function() {
+	    		console.log(chalk.bold.cyan('We saved him to your clipboard!'));
+	    	})
+			console.log(escapedDong);
+	});
 }
