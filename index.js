@@ -41,5 +41,10 @@ let dongers = [
 		id: 4,
 		name: 'tablereverse',
 		code: '┬━┬﻿ ノ( ゜¸゜ノ)'
+	},
+	{
+		id: 5,
+		name: 'lenny',
+		code: '( ͡° ͜ʖ ͡°)'
 	}
 ];
