@@ -54,24 +54,24 @@ if (process.argv[2] === '-d') {
             console.log(chalk.bold.cyan(argumentDong[0].code));
         })
         return;
-    } else {
-        prompt.start();
-        
-        prompt.message = 'Hello sir';
-        
-        prompt.get({
-            properties: {
-                dong: {
-                    description: 'Which dong do you want today?'
-                }
-            }
-        }, function (err, result) {
-            let filteredDong = dongers.filter(dong => dong.name === result.dong);
-            let escapedDong = filteredDong.shift().code;
-            ncp.copy(escapedDong, function() {
-                console.log(chalk.bold.cyan('We saved him to your clipboard!'));
-            })
-            console.log(escapedDong);
-        });
     }
+} else {
+    prompt.start();
+    
+    prompt.message = 'Hello sir';
+    
+    prompt.get({
+        properties: {
+            dong: {
+                description: 'Which dong do you want today?'
+            }
+        }
+    }, function (err, result) {
+        let filteredDong = dongers.filter(dong => dong.name === result.dong);
+        let escapedDong = filteredDong.shift().code;
+        ncp.copy(escapedDong, function() {
+            console.log(chalk.bold.cyan('We saved him to your clipboard!'));
+        })
+        console.log(escapedDong);
+    });
 }
